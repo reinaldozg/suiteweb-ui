@@ -1,0 +1,146 @@
+<aside class="sidebar">
+	
+	{{> app/_common/sidebar/header/header}}
+	
+	<div class="sidebar-container ps-scrollview-auto">	 
+
+		<div class="profile-user">
+			{{> app/_common/header/nav/profile/profile}}
+		</div>
+		<div class="sidebar-titulo">
+			<span></span>
+		</div>
+		<nav class="menu">
+			<ul class="sidebar-menu metismenu" id="sidebar-menu">
+
+				<li {{#is pagename "in" "login,signup,reset"}}
+						class="active open"
+					{{/is}} >
+
+					<a href="">
+						<i class="fa fa-file-text-o"></i> Autenticação
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "login"}}class="active"{{/is}}>
+							<a href="login.html">
+								Login
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "signup"}}class="active"{{/is}}>
+							<a href="signup.html">
+								Sign Up
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "reset"}}class="active"{{/is}}>
+							<a href="reset.html">
+								Reset
+							</a>
+						</li>
+					</ul>
+				</li>	
+
+				<li {{#is pagename "in" "error-404,error-500"}}
+						class="active open"
+					{{/is}} >
+
+					<a href="">
+						<i class="fa fa-file-text-o"></i> Erros
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "error-404"}}class="active"{{/is}}>
+							<a href="error-404.html">
+								Error 404 App
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "error-500"}}class="active"{{/is}}>
+							<a href="error-500.html">
+								Error 500 App
+							</a>
+						</li>
+						
+					</ul>
+				</li>		
+
+				<li {{#is pagename "in" "buttons,grid,icons,cards,typography"}}
+						class="active open"
+					{{/is}} >
+					<a href="">
+						<i class="fa fa-desktop"></i> UI Elements
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "buttons"}}class="active"{{/is}}>
+							<a href="buttons.html">
+								Buttons
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "cards"}}class="active"{{/is}}>
+							<a href="cards.html">
+								Cards
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "typography"}}class="active"{{/is}}>
+							<a href="typography.html">
+								Typography
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "icons"}}class="active"{{/is}}>
+							<a href="icons.html">
+								Icons
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "grid"}}class="active"{{/is}}>
+							<a href="grid.html">
+								Grid
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li {{#is pagename "in" "lista,formulario"}}
+						class="active open"
+					{{/is}} >
+
+					<a href="">
+						<i class="fa fa-file-text-o"></i> Paginas
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul class="sidebar-nav">
+						<li {{#is pagename "===" "lista"}}class="active"{{/is}}>
+							<a href="lista.html">
+								Lista
+							</a>
+						</li>
+
+						<li {{#is pagename "===" "formulario"}}class="active"{{/is}}>
+							<a href="formulario.html">
+								Formulario
+							</a>
+						</li>					
+					</ul>
+				</li>					
+
+			</ul>
+		</nav> 
+
+	</div>
+
+{{!--## DESCOMENTAR PARA ADICIONAR A SESSÃO DE CONFIGURAÇÃO DO MENU LATERAL ##--}}
+{{!-- {{> app/_common/sidebar/customize/customize}} --}}
+
+</aside>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>

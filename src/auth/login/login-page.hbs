@@ -1,0 +1,48 @@
+---
+layout: auth/auth-layout
+themeTitle: Zenga Web
+---
+<div class="auth-intro">	
+	{{> _common/logo/logo}}
+	<div class="intro-title"> Bem vindo! </div>
+	<div class="intro-descricao">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper nisl erat, vel convallis elit fermentum pellentesque. Sed mollis velit facilisis facilisis viverra. 
+	</div>
+</div>
+<div class="auth-container ps-scrollview-auto">	
+	<header class="auth-header">
+		<div class="auth-title">
+			{{> _common/logo/logo}}
+			<div style="display: initial;">
+				{{themeTitle}}
+			</div>
+		</div>
+	</header>
+	<div class="auth-content">
+		<p class="text-center">LOGIN PARA CONTINUAR</p>
+		<form id="login-form"  action="/index.html" method="POST" novalidate="">
+			
+			<div class="form-group">
+				<label for="username" >Login</label>
+				<input type="text" class="form-control underlined" name="username" id="username" placeholder="Digite seu login de acesso" required>
+			</div>
+
+			<div class="form-group">
+				<label for="password" >Senha</label>
+				<input type="password" class="form-control underlined" name="password" id="password" placeholder="Digite sua senha" required>
+			</div>
+
+			<div class="form-group">
+				<label for="remenber-me">
+					<input class="checkbox" id="remenber-me" name="remenber-me" type="checkbox">
+					<span>Lembrar-me</span>
+				</label>			
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-block btn-primary">Login</button>
+			</div>
+			
+		</form>
+	</div>
+</div>

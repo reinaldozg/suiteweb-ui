@@ -1,0 +1,279 @@
+.sidebar {
+	background-color: $sidebar-color-primary;
+	width: $sidebar-width;
+	padding-bottom: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	-webkit-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+	z-index: 2100;
+	-webkit-box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+
+	@include media-down(md) {
+		position: fixed;
+		left: -$sidebar-width - 10;
+	}
+
+	.sidebar-fixed & {
+		position: fixed;
+	}
+
+	.sidebar-open & {
+		left: 0;
+
+	}
+
+	.sidebar-container {
+		position: absolute;
+		top: $header-height-xl !important;
+		bottom: 51px;
+		width: 100%;
+		left: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		.sidebar-titulo{
+			background-color: $sidebar-color-primary !important;
+			height: 40px;
+			position: relative;
+			display: block;
+
+			span{
+				position:absolute;
+				top:70%;
+				left: 52px;
+				transform:translate(-50%,0%)
+			}
+
+		}
+
+		.profile-user{
+			background-color: $sidebar-brand-color !important;
+			height: $sidebar-profile-user-height !important;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: darken($sidebar-color-primary, 6.5%);
+		}
+
+		@include media(lg) {
+			top: $header-height-lg !important;
+		}
+
+		@include media(md) {
+			top: $header-height-md !important;
+		}
+
+		@include media-down(sm) {
+			top: $header-height-sm !important;
+        }
+
+        @include clearfix();
+	}
+
+	.label {
+		font-size: .75em;
+		display: inline-block;
+		border-radius: .2em;
+		padding: 2px 5px;
+		background-color: #ccc;
+		color: #000;
+		margin: 0 3px;
+	}
+
+	.label-screenful {
+		color: #fff;
+		background-color: #6769d4;
+	}
+
+	.sidebar-menu {
+
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		// Common styles
+		// li {
+		// 	a:focus,
+		// 	.open & a:focus {
+		// 		background-color: red
+		// 	}
+		// }
+
+		// Second + menu items
+		ul {
+			padding: 0;
+			height: 0px;
+			overflow: hidden;
+
+			.loaded & {
+				height: auto;
+			}
+		}
+
+		li.active ul {
+			height: auto;
+		}
+
+
+		// All links which are not active
+		// have subdued color
+		li a {
+			color: $sidebar-color-text;
+			text-decoration: none;
+			display: block;
+		}
+
+		// All links which are not active
+		// On hover bg become darker
+		// Their color become lighter
+		li a:hover,
+		// li.open > a,
+		li.open a:hover {
+			color: $sidebar-color-text-active;
+			background-color: $sidebar-color-hover !important;
+		}
+
+		.arrow {
+			float: right;
+			font-size: 18px;
+			line-height: initial;
+			transition: all 0.3s ease;
+			margin-right: 0;
+
+			&:before {
+				content: "\f105" !important;
+			}
+		}
+
+		li.open > a {
+			.arrow {
+				transform: rotate(90deg);
+			}
+		}
+
+
+		// First level items
+		&> li {
+
+			// First level items links
+			& > a {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 20px;
+				padding-right: 15px;
+			}
+
+			// First level active links have primary background
+			&.active > a,
+			&.active > a:hover {
+				background-color: $color-primary !important;
+				color: $color-text-inverse !important;
+			}
+
+			// First level active links have bit darker background
+			&.open > a {
+				background-color: darken($sidebar-color-primary, 3%);
+			}
+
+			// First level item links arrow
+			& > a {
+				i {
+					margin-right: 5px;
+					font-size: 16px;
+
+					&.arrow {
+						font-size: 20px;
+					}
+				}
+			}
+
+		}
+
+		// Second level items
+		& > li > .sidebar-nav> li {
+
+			// Second level and deeper items links
+			// Have bit darker background and more padding
+			// from left side
+			a {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 50px;
+				padding-right: 15px;
+				background-color: darken($sidebar-color-primary, 3%);
+			}
+
+			// Second level active items links
+			// Have brighter color
+			&.active a {
+				color: $sidebar-color-text-active;
+			}
+
+			// Third level items
+			& > .sidebar-nav > li {
+				a {
+					padding-left: 60px;
+					padding-right: 15px;
+				}
+
+				& > .sidebar-nav > li {
+					a {
+						padding-left: 70px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.sidebar-overlay {
+	position: absolute;
+	display: block;
+	left: 200vw;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 5;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: 2050;
+
+	@include media-down(md) {
+		background-color: fade-out(#000, 0.3);
+		display: block;
+		opacity: 1;
+	}
+
+	@include media-down(sm) {
+		background-color: fade-out(#000, 0.3);
+		opacity: 1;
+	}
+
+
+	.sidebar-open & {
+		@include media-down(md) {
+			background-color: fade-out(#000, 0.3);
+			left: 0;
+			opacity: 1;
+		}
+	}
+}
+
+.sidebar-mobile-menu-handle {
+	display: none;
+	position: absolute;
+	top: $header-height-sm;
+	background-color: transparent;
+	width: 30px;
+	bottom: 0;
+	z-index: 10;
+
+	@include media-down(md) {
+		display: none;
+	}
+}

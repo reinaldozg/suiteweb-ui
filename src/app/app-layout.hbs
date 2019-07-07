@@ -1,0 +1,26 @@
+---
+layout: _main-layout
+themeTitle: Zenga web
+---
+  <div class="app" id="app">
+    {{!-- Default header block --}}
+    {{> app/_common/header/header}}
+
+    {{!-- Default sidebar block --}}
+    {{> app/_common/sidebar/sidebar}}
+
+    <div class="mobile-menu-handle"></div>
+  
+    {{!-- Default sidebar block --}}
+    {{> app/_common/sidebar-quick-panel/sidebar-quick-panel}}
+
+    {{!-- Default sidebar block --}}
+    {{> app/_common/sidebar-chat/sidebar-chat}}
+
+    <main class="content ps-scrollview-auto"> {{!--{{pagename}}-page">  --}}  	
+		    {{{body}}}
+		</main>       
+
+    {{!-- Default footer block --}}
+      {{> app/_common/modals/modals}}
+  </div>

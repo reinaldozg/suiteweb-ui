@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '_common/_styles/mixins';
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: $global-font-Name !important;
+	font-size: $global-font-size !important;
+	color: $color-text;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	background-color: $color-background;
+}
+
+#ref {
+	.color-primary {
+		color: $color-primary;
+	}
+
+	.chart {
+		.color-primary {
+			color: $chart-color-primary;
+		}
+		.color-secondary {
+			color: $chart-color-secondary;
+		}
+	}
+}

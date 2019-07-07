@@ -1,0 +1,70 @@
+.app {
+	margin: 0 auto;
+	position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+	box-shadow: 0 0 3px #ccc;
+	transition: left 0.3s ease, padding-left 0.3s ease;
+	display: block;
+
+	@include media-up(xl) {
+
+		right: $menuChat-width;
+
+		.sidebar-chat{
+			width: ($sidebar-chat-width + $menuChat-width);
+			right: - ($sidebar-chat-width + 1);
+		}
+		.header>#collapse-chat-btn-msep{
+			display: none;
+		}
+
+	}
+
+	.content {
+		position: absolute;
+		bottom: 0px;		
+		right: 0px;
+		left: $sidebar-width;
+		background-color: $color-background;
+		overflow: hidden;
+		overflow-y:auto;
+
+		@include media-up(xl) {
+			top: $header-height-xl;
+		}
+
+		@include media(lg) {
+			top: $header-height-lg;
+		}
+
+		@include media(md) {
+			top: $header-height-md;
+			left: 0;	
+		}
+
+		@include media-down(sm) {
+			top: $header-height-sm;
+			left: 0;
+		}
+	}
+
+	@include media-down(md) {
+		left: 0;
+	}
+	
+	&.sidebar-open {
+		// Disable content scrolling when sidebar is open
+		@include media-down(md) {
+			left: 0;
+		}
+	}
+
+	&.blank {
+		background-color: #667380;
+	}
+
+}
+

@@ -1,0 +1,63 @@
+.sidebar-header {
+
+	.brand {	
+
+		background-color: $sidebar-brand-color;
+		color: $color-background-form;
+    //	box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); 
+		display: flex;
+		display: -webkit-flex;
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		text-align: left;
+
+		 @include media-up(xl) {
+		 	height: $header-height-xl;		 	
+         }
+		
+		 @include media(lg) {
+		 	height: $header-height-lg;		 	
+         }
+      
+         @include media(md) {
+		 	height: $header-height-md;			 	
+         }
+      
+         @include media-down(sm) {
+		 	height: $header-height-sm;		 	
+         }
+
+		.logo{
+			display: flex;
+			display: -webkit-flex;
+			min-width: 12%;
+			width: 12%;
+			margin: auto 0px 0px 8px;
+			padding: 0px;
+			height: 100%;
+			span{
+				font-size: 2.6rem;
+			}
+		}
+		.nome-sistema{
+			margin: 12px auto;
+			display: flex;
+			display: -webkit-flex;
+			min-width: 88%;
+			width: 88%;
+			font-size: 1.8em;
+			display: block;
+			margin: auto;
+			font-weight: 300;
+
+			p{
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+		
+		
+		}				
+		
+	}
+}

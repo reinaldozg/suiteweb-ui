@@ -1,0 +1,21 @@
+.separator-header{
+    width: 1px;
+    background: rgba(0,0,0,.12);
+
+    @include media-up(xl) {
+      height: $header-height-xl;
+	}
+
+	@include media(lg) {
+		height: $header-height-lg;
+	}
+
+	@include media(md) {
+		height: $header-height-md;	
+	}
+
+	@include media-down(sm) {
+    	height: $header-height-sm;
+	}
+  
+}

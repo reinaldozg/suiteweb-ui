@@ -1,0 +1,132 @@
+/*************************************************************
+*					  Colors Definitions
+**************************************************************/
+$color-success: #4bcf99 !default;
+$color-info: #76D4F5 !default;
+$color-warning: #fe974b !default;
+$color-danger: #FF4444 !default;
+$color-inverse: #131e26 !default;
+
+$color-primary: #6F8CC7 !default;
+$color-primary-hover:lighten($color-primary, 4%);
+$color-primary-light: lighten($color-primary, 10%) !default;
+
+$color-background:#f5f5f5 !default;
+$color-background-form: #fff !default;
+$color-background-form-hover: darken($color-background-form, 4%) !default;
+
+$color-divider: #d6d4d4 !default;
+$color-border: #dee2e6;
+$color-text: #4f5f6f !default;
+$color-text-light: #7e8e9f !default;
+$color-text-muted: #C2CCD6;
+$color-text-inverse:$color-background !default;
+$color-text-passive: #c5c5c5 !default;
+
+// Links
+$link-color: #969696 !default;
+$link-transition: initial;
+$link-decoration: underline;
+$link-hover-decoration: underline !default;
+
+//Sidebar
+$sidebar-brand-color: #1e2129 !default;
+$sidebar-color-primary: #282c36 !default;
+$sidebar-color-secondary: darken($sidebar-color-primary, 1.8%) !default;
+$sidebar-color-hover: darken($sidebar-color-secondary, 1.9%) !default;
+$sidebar-color-text: fade-out($color-text-inverse, 0.5) !default;
+$sidebar-color-text-active: $color-text-inverse;
+
+//Sidebar-quick-panel
+$sidebar-quick-panel-brand-color: darken(#fff, 1%) !default;
+$sidebar-quick-panel-color-primary: darken($sidebar-quick-panel-brand-color, 1%) !default;
+$sidebar-quick-panel-color-secondary: darken($sidebar-quick-panel-color-primary, 3%) !default;
+$sidebar-quick-panel-color-text: fade-out($color-text-inverse, 0.5) !default;
+$sidebar-quick-panel-color-text-active: $color-text-inverse;
+
+//chat
+$sidebar-chat-color-primary:#fff !default;
+$sidebar-chat-color-secondary: darken($sidebar-chat-color-primary, 3%) !default;
+
+/*************************************************************
+ *					Font name e size                         *
+ *************************************************************/
+$global-font-Name: Roboto,"Helvetica Neue",sans-serif;
+$global-font-size: 14px;
+$chat-message-font-size: 12px;
+/*************************************************************
+ *					Common Element Variables                 *
+ *************************************************************/
+
+// Header
+$header-height-xl: 58px !default;
+$header-height-lg: 55px !default;
+$header-height-md: 52px !default;
+$header-height-sm: 49px !default;
+
+// Sidebar
+$sidebar-width: 270px !default;
+$sidebar-profile-user-height: 135px !default;
+
+// Sidebar-Chat
+$menuChat-width: 60px; 
+$sidebar-chat-width: $sidebar-width !default;
+
+//Panel
+$painel-body-top: -50px !default;
+$painel-header-height-xl: 150px !default;
+$painel-header-height-lg: 140px !default;
+$painel-header-height-md: 130px !default;
+$painel-header-height-sm: 120px !default;
+
+$painel-padding-x-xl: 45px !default;
+$painel-padding-x-lg: 25px !default;
+$painel-padding-x-md: 10px !default;
+$painel-padding-x-sm: 3px !default;
+
+
+/*************************************************************/
+
+
+// Buttons
+$btn-radius: 25px !default;
+$btn-circle-radius: 50px !default;
+
+// Dropdowns
+$dropbown-color-border: fade-out($color-text-light, 0.9) !default;
+
+
+// Item list
+$item-list-color-border: lighten($color-divider, 6%) !default;
+
+// Charts
+$chart-color-primary: $color-primary !default;
+$chart-color-secondary: lighten($chart-color-primary, 10%) !default;
+
+/* ***************************************************
+*			Page Specific Element Variables
+****************************************************** */
+
+// Dashboard
+$dashboard-stat-icon-color: #BDBDBD !default;
+
+$auth-container-width:430px;
+
+
+
+// EXCLUIR
+$dropdown-link-hover-color-bg: #f5f5f5 !default;
+
+$card-padding-bottom-xl:0px;
+$card-padding-bottom-x:0px;
+$card-padding-bottom-x-sm:0px;
+
+$card-margin-bottom: 0px;
+$color-card-bg: hsl(0, 0%, 100%) !default;
+
+$card-padding-x-xl: 6px !default;
+$card-padding-x: 5px !default;
+$card-padding-x-sm:2px !default;
+
+// Footer
+$footer-height: 0px !default;

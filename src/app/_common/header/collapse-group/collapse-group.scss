@@ -1,0 +1,57 @@
+.header .header-block-collapse-group {
+	
+	display: flex;
+
+	.collapse-group-btn {
+		background: none;
+	   border: none;
+	   -webkit-box-shadow: none;
+	   box-shadow: none;
+	   color: $color-primary;	 
+	   border-radius: 0;
+	   outline: none;
+	   margin: 0px auto;
+
+	   @include media-up(xl) {
+			font-size: 25px;
+		}
+
+		@include media(lg) {
+			font-size: 24px;
+		}
+
+		@include media(md) {
+			font-size: 23px;
+		}
+
+		@include media-down(sm) {
+			font-size: 22px;
+		}
+
+   	}
+
+	@include media-up(xl) {
+		height: $header-height-xl;
+		width: 58px;
+	}
+
+	@include media(lg) {
+		height:$header-height-lg;
+		width: 53px;
+	}
+
+	@include media(md) {
+		height:$header-height-md;
+		width: 48px;
+	}
+
+	@include media-down(sm) {
+		height:$header-height-sm;
+		width: 43px;
+	}
+
+}
+	
+
+
+

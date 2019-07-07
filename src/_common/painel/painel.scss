@@ -1,0 +1,133 @@
+.painel {	
+    display: block;
+    min-height: 100%;
+	background-color: $color-background;
+	border-radius: 0;
+    border: none; 
+
+    .painel {
+        box-shadow: none;
+        background-color: $color-background;
+	}
+
+	.painel-header {
+		background-image: none;
+		background-color: $color-primary-light;
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+        border-radius: 0;
+        border: none;
+        z-index:1000;
+        top: $painel-body-top;       
+
+        @include media-up(xl) {
+            min-height: $painel-header-height-xl;
+            max-height: $painel-header-height-xl;
+            height: $painel-header-height-xl;
+		}
+
+		@include media(lg) {
+            min-height: $painel-header-height-lg;
+            max-height: $painel-header-height-lg;
+            height: $painel-header-height-lg;
+		}
+
+		@include media(md) {
+            min-height: $painel-header-height-md;
+            max-height: $painel-header-height-md;
+            height: $painel-header-height-md;
+		}
+
+		@include media-down(sm) {
+            min-height: $painel-header-height-sm;
+            max-height: $painel-header-height-sm;
+            height: $painel-header-height-sm;
+		}
+
+		@include clearfix();
+
+		&.bordered {
+			border-bottom: 1px solid $color-divider;
+        }
+        
+        .title{
+            color: $color-background-form;		          
+            display: inline-flex;
+
+            @include media-up(xl) {
+                font-size: 18px;  
+                padding: 0px 0px 0px $painel-padding-x-xl;
+            }
+    
+            @include media(lg) {
+                font-size: 17px;  
+                padding: 0px 0px 0px $painel-padding-x-lg;
+            }
+    
+            @include media(md) {
+                font-size: 16px;  
+                padding: 0px 0px 0px $painel-padding-x-md;
+            }
+    
+            @include media-down(sm) {
+                font-size: 15px;  
+                padding: 0px 0px 0px $painel-padding-x-sm;
+            }
+
+            i{
+				margin-top: 2px;
+				margin-right: 10px;
+				margin-left: 0px;
+            }
+		}
+    }
+    
+    .painel-body {
+        display: -webkit-box;        
+        background-color: $color-background-form;
+        position: relative;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+        top: -50px;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        @include media-up(xl) {
+            padding: 0px $painel-padding-x-xl 0px $painel-padding-x-xl;
+		}
+
+		@include media(lg) {
+            padding: 0px $painel-padding-x-lg 0px $painel-padding-x-lg;
+		}
+
+		@include media(md) {
+            padding: 0px $painel-padding-x-md 0px $painel-padding-x-md;
+		}
+
+		@include media-down(sm) {
+            padding: 0px $painel-padding-x-sm 0px $painel-padding-x-sm;
+        }
+
+        @include clearfix();
+        
+        form{
+            width: 100%;
+            height: auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .tab-content {
+            padding: 0;
+            border-color:$color-border;
+            
+            .section {
+                margin-bottom: 20px;
+            }
+        }
+
+    }	
+}

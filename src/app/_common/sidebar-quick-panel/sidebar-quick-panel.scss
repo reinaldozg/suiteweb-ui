@@ -1,0 +1,50 @@
+.sidebar-quick-panel{
+	background-color: $sidebar-quick-panel-color-primary;
+	width: $sidebar-width;
+	padding-bottom: 60px;
+	position: fixed;
+	top: 0;
+	right: - ($sidebar-width +2);
+	bottom: 0;
+	transition: right 0.3s ease;
+	z-index: 3700;
+	-webkit-box-shadow: 10px 66px 4px 0px rgba(0, 0, 0, 0.2), 0px 66px 4px 0px rgba(0, 0, 0, 0.14), 0px 66px 4px 0px rgba(0, 0, 0, 0.12);   
+    box-shadow: 10px 66px 4px 0px rgba(0, 0, 0, 0.2), 0px 66px 4px 0px rgba(0, 0, 0, 0.14), 0px 66px 4px 0px rgba(0, 0, 0, 0.12);
+    overflow-x: none;
+    overflow-y: auto;
+
+    .sidebar-quick-panel-open & {
+        right: 0;
+    }
+    
+    .quick-panel-list{
+        min-height: 150px;
+        height: 150px;       
+    }
+    .quick-panel-separator{
+        background: rgba(0,0,0,.12);
+        height: 1px;
+        width: 100%;
+    }
+}
+
+.sidebar-quick-panel-overlay {
+	position: absolute;
+	display: block;
+    left: 0;
+	right: 200vw;
+	top: 0;
+	bottom: 0;
+	z-index: 5;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+    z-index: 3600;
+    background-color: fade-out(#000, 0.3);
+    
+	.sidebar-quick-panel-open & {		
+        right: 0;
+		opacity: 1;
+        background-color: fade-out(#000, 0.3);
+        display: block; 
+	}
+}

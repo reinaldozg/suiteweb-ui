@@ -1,0 +1,286 @@
+.form-control.underlined {
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 0;
+	border: none;
+ 	border-radius: 0;
+	box-shadow: none;
+	border-bottom: 1px solid $color-divider;
+
+	&.indented {
+		padding: .375rem .75rem;
+	}
+
+	.has-error &:focus,
+	.has-warning &:focus,
+	.has-success &:focus,
+	&:focus, &:focus + a.bt {
+		border: none;
+		box-shadow: none;
+		border-bottom: 1px solid $color-primary;
+	}
+
+	.has-error & {
+		box-shadow: none;
+		border-color: $color-danger;
+	}
+
+	.has-warning & {
+		box-shadow: none;
+		border-color: $color-warning;
+	}
+
+	.has-success & {
+		box-shadow: none;
+		border-color: $color-success;
+	}
+}
+
+
+select{
+	display: initial;
+    width: 75px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: menulist-button;
+    outline: none;
+    cursor: pointer;
+    text-indent: 12.01px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    border-radius: 0px;
+    min-height: 40px;
+	margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+	color: inherit;
+	
+	
+	option {
+		font-weight: normal;
+		display: block;
+		white-space: pre;
+		min-height: 1.2em;
+		padding: 0px 2px 1px;
+	 }
+	
+	option:checked {
+ 		background-color: $color-primary-hover;	
+	}
+	option.hover, option:hover {
+		background-color: $color-primary-hover !important;	
+	}
+}
+
+
+input,
+textarea {
+	outline: none;
+	
+}
+
+
+.form-group {
+
+	margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+	
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+
+		[class^='col'] {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	&.has-error {
+		span.has-error {
+			color: $color-danger;
+			font-size: 13px;
+			display: block !important;
+		}
+
+		.form-control-feedback {
+			color: $color-danger;
+		}
+	}
+
+	&.has-warning {
+		span.has-warning {
+			color: $color-warning;
+			font-size: 13px;
+			display: block !important;
+		}
+
+		.form-control-feedback {
+			color: $color-warning;
+		}
+	}
+
+	&.has-success {
+		span.has-success {
+			color: $color-success;
+			font-size: 13px;
+			display: block !important;
+		}
+
+		.form-control-feedback {
+			color: $color-success;
+		}
+	}
+}
+
+/* Input groups */
+.input-group {
+	margin-bottom: 10px;
+
+	.form-control {
+		padding-left: 5px;
+	}
+
+	.input-group-btn {
+		.btn {
+			margin-bottom: 0;
+		}
+	}
+
+	span.input-group-addon {
+		font-style: italic;
+		border: none;
+		border-radius: 0;
+		border: none;
+		background-color: $color-divider;
+		transition: background-color ease-in-out 15s, color ease-in-out .15s;
+
+		&.focus {
+			background-color: $color-primary;
+			color: #ffffff;
+		}
+	}
+}
+
+label,
+.control-label {
+	font-weight: 600;
+}
+
+
+.form-control.boxed {
+    border-radius: 0;
+    box-shadow: none;
+
+    &:focus {
+    	border: 1px solid $color-primary;
+    }
+}
+
+.radio,
+.checkbox {
+	display: none;
+
+	& + span {
+		padding: 0;
+		padding-right: 10px;
+	}
+
+	& + span:before {
+		font-family: FontAwesome;
+		font-size: 21px;
+		display: inline-block;
+		vertical-align: middle;
+		letter-spacing: 10px;
+		color: darken($color-divider, 5%);
+	}
+
+	&:checked + span:before {
+		color: $color-primary;
+	}
+
+	&:disabled + span:before {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&:checked:disabled  + span:before {
+		color: darken($color-divider, 5%);
+	}
+}
+
+.checkbox {
+
+	& + span:before {
+		content: "\f0c8";
+	}
+
+	&:checked + span:before {
+		content: "\f14a";
+	}
+
+	&.rounded {
+		& + span:before {
+			content: "\f111";
+		}
+
+		&:checked + span:before {
+			content: "\f058";
+		}
+	}
+}
+
+.radio {
+
+	& + span:before {
+		content: "\f111";
+	}
+
+	&:checked + span:before {
+		content: "\f192";
+	}
+
+	&.squared {
+		& + span:before {
+			content: "\f0c8";
+		}
+
+		&:checked + span:before {
+			content: "\f14a";
+		}
+	}
+
+}
+
+
+// Placeholders
+.form-control {
+	&::-webkit-input-placeholder {
+		padding-left: 2px;
+		font-style: italic;
+		color: darken($color-divider, 5%);
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+		padding-left: 2px;
+		font-style: italic;
+		color: $color-divider;
+	}
+
+	&::-moz-placeholder {  /* Firefox 19+ */
+		padding-left: 2px;
+		font-style: italic;
+		color: $color-divider;
+	}
+
+	&:-ms-input-placeholder {
+		padding-left: 2px;
+		font-style: italic;
+		color: $color-divider;
+	}
+
+}
+
+
